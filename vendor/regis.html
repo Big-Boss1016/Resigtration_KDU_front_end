@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyungdong University Global Application</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/regs.css" />
+<style>
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+  <div class="card p-4">
+    <nav>
+        <a href="../index.html">
+          <img src="img/image.png" alt="Kyungdong University Logo" style="height:50px;">
+        </a>
+        <a class="pdf-link" href="data/Application_Form.pdf" target="_blank" rel="noopener">Open original PDF</a>
+    </nav>
+    <h2 class="text-center mb-3">Kyungdong University Global — Application Form</h2>
+
+    <div class="progress mb-4">
+      <div class="progress-bar" id="progressBar" style="width:16%"></div>
+    </div>
+
+  <form id="appForm" enctype="multipart/form-data">
+
+  <!-- STEP 1 PERSONAL DETAILS -->
+
+  <div class="form-step active">
+
+    <div class="section-title">1. Personal Details</div>
+
+    <div class="row g-3">
+
+      <div class="col-md-3 text-center">
+        <label class="form-label">Photo</label>
+
+          <div class="photo-box mb-2" id="photoPreview">
+            <span id="photoText">150×185</span>
+            <img id="previewImg" style="display:none;">
+          </div>
+
+          <input type="file" id="photo" name="photo" class="form-control" accept="image/*">
+      </div>
+
+    <div class="col-md-9">
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+        <label class="form-label">Family Name</label>
+        <input class="form-control" name="familyName">
+        </div>
+
+        <div class="col-md-6">
+        <label class="form-label">Given Name</label>
+        <input class="form-control" name="givenNames">
+        </div>
+
+        <div class="col-md-6">
+        <label class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" name="dob">
+        </div>
+
+        <div class="col-md-6">
+        <label class="form-label">Passport Number</label>
+        <input class="form-control" name="passport">
+        </div>
+
+        <div class="col-md-6">
+        <label class="form-label">Citizenship</label>
+        <input class="form-control" name="citizenship">
+        </div>
+
+        <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+      <div class="mt-4 text-end">
+        <button type="button" class="btn btn-primary next-btn">Next</button>
+      </div>
+
+</div>
+
+
+<!-- STEP 2 ADDRESS -->
+
+<div class="form-step">
+
+  <div class="section-title">Permanent Address</div>
+
+  <div class="row g-3">
+
+    <div class="col-12">
+    <label>Full Address</label>
+    <input class="form-control" name="permAddress">
+    </div>
+
+    <div class="col-md-4">
+    <label>ZIP Code</label>
+    <input class="form-control" name="permZip">
+    </div>
+
+    <div class="col-md-4">
+    <label>Telephone</label>
+    <input class="form-control" name="permTelephone">
+    </div>
+
+    <div class="col-md-4">
+    <label>Mobile</label>
+    <input class="form-control" name="permMobile">
+    </div>
+
+  </div>
+
+  <div class="section-title mt-4">3. Current Address</div>
+
+  <div class="row g-3">
+
+    <div class="col-12">
+    <label>Full Address</label>
+    <input class="form-control" name="currentAddress">
+    </div>
+
+    <div class="col-md-4">
+    <label>ZIP</label>
+    <input class="form-control" name="currentZip">
+    </div>
+
+    <div class="col-md-4">
+    <label>Telephone</label>
+    <input class="form-control" name="currentTelephone">
+    </div>
+
+    <div class="col-md-4">
+    <label>Mobile</label>
+    <input class="form-control" name="currentMobile">
+    </div>
+
+  </div>
+
+  <div class="mt-4 d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+    <button type="button" class="btn btn-primary next-btn">Next</button>
+  </div>
+
+</div>
+
+
+<!-- STEP 3 LANGUAGE -->
+
+<div class="form-step">
+
+  <div class="section-title">4. Language Proficiency</div>
+
+  <div class="mb-3">
+    <label>English is my first language</label><br>
+    <input type="radio" name="engFirst" value="yes"> Yes
+    <input type="radio" name="engFirst" value="no"> No
+  </div>
+
+  <div class="row g-3">
+
+    <div class="col-md-4">
+    <label>Test Name</label>
+    <input class="form-control" name="Test_name">
+    </div>
+
+    <div class="col-md-4">
+    <label>Test Date</label>
+    <input type="date" class="form-control" name="Test_date"> 
+    </div>
+
+    <div class="col-md-4">
+    <label>Score</label>
+    <input class="form-control" name="score">
+    </div>
+
+  </div>
+
+<div class="section-title mt-4">Medium of Instruction</div>
+
+  <input type="radio" name="medium" value="English"> English
+  <input type="radio" name="medium" value="Korean"> Korean
+
+  <div class="mt-4 d-flex justify-content-between">
+    <button class="btn btn-secondary prev-btn" type="button">Previous</button>
+    <button class="btn btn-primary next-btn" type="button">Next</button>
+  </div>
+
+</div>
+
+
+<!-- STEP 4 COURSES -->
+
+<div class="form-step">
+
+  <div class="section-title">5. Course Selection</div>
+
+  <h6>Language Course</h6>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="EAP">
+    <label class="form-check-label">English Language for Academic Purpose (EAP)</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="KAP">
+    <label class="form-check-label">Korean Language for Academic Purpose(KAP)</label>
+  </div>
+
+  <h6>Undergraduate</h6>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="Artificial Intelligence">
+    <label class="form-check-label">Artificial Intelligence</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="International Business">
+    <label class="form-check-label">International Business</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="International Hotel Management">
+    <label class="form-check-label">International Hotel Management</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="course" value="Smart Computing">
+    <label class="form-check-label">Smart Computing</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="couser" value="Korean Business – Artificial Intelligence">
+    <label class="form-check-label">Korean Business – Artificial Intelligence</label>
+  </div>
+
+   <h6 class="mt-3">Graduate</h6>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label">AI and Data Science</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label">Inertnational Business Administration</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label">International HOspitality and Toursim Management</label>
+  </div>
+  
+
+  <div class="mt-4 d-flex justify-content-between">
+    <button class="btn btn-secondary prev-btn" type="button">Previous</button>
+    <button class="btn btn-primary next-btn" type="button">Next</button>
+  </div>
+
+</div>
+
+
+<!-- STEP 5 EDUCATION -->
+
+<div class="form-step">
+
+  <div class="section-title">6. Previous Studies</div>
+
+  <div class="row g-3">
+
+    <!-- Study Level Selection -->
+    <div class="col-md-6">
+      <label>Level of Study</label>
+      <select class="form-select" name="studyLevel">
+        <option value="">Select Level</option>
+        <option value="High School">High School</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor Degree">Bachelor Degree</option>
+        <option value="Master Degree">Master Degree</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label>Country</label>
+      <input type="text" class="form-control" name="studyCountry" list="countryList">
+    </div>
+
+    <!-- School Name -->
+    <div class="col-md-6">
+      <label>School / University Name</label>
+      <input type="text" class="form-control" name="schoolName">
+    </div>
+
+    <!-- Result -->
+    <div class="col-md-6">
+      <label>Result / GPA</label>
+      <input type="text" class="form-control" name="result">
+    </div>
+
+    <!-- Entrance Date -->
+    <div class="col-md-6">
+      <label>Entrance Date</label>
+      <input type="date" class="form-control" name="entranceDate">
+    </div>
+
+    <!-- Completion Date -->
+    <div class="col-md-6">
+      <label>Completion Date</label>
+      <input type="date" class="form-control" name="completionDate">
+    </div>
+
+  </div>
+
+  <div class="mt-4 d-flex justify-content-between">
+    <button class="btn btn-secondary prev-btn" type="button">Previous</button>
+    <button class="btn btn-primary next-btn" type="button">Next</button>
+  </div>
+
+</div>
+
+
+<!-- STEP 6 SPONSOR + DECLARATION -->
+
+<div class="form-step">
+
+
+<div class="section-title">7. Financial Sponsor</div>
+
+<div class="row g-3">
+
+  <div class="col-md-4">
+    <label>Name</label>
+    <input class="form-control">
+  </div>
+   <div class="col-md-4">
+    <label>Occupation</label>
+    <input class="form-control">
+  </div>
+  <div class="col-md-4">
+    <label>Relationship</label>
+    <select class="form-select">
+    <option>Father</option>
+    <option>Mother</option>
+    <option>Myself</option>
+    </select>
+  </div>
+
+</div>
+
+<div class="section-title mt-4">8. Required Documents Upload</div>
+
+    <div class="row g-3">
+
+    <div class="col-md-6">
+    <label>Certificate of Language Proficiency</label>
+    <input type="file" class="form-control" name="languageCertificate" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <div class="col-md-6">
+    <label>Bank Balance Statement</label>
+    <input type="file" class="form-control" name="bankStatement" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <div class="col-md-6">
+    <label>Copy of Your Passport</label>
+    <input type="file" class="form-control" name="passportCopy" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <div class="col-md-6">
+    <label>Student Code of Conduct</label>
+    <input type="file" class="form-control" name="codeOfConduct" accept=".pdf">
+    </div>
+
+    <div class="col-md-6">
+    <label>Medical Check-up Report</label>
+    <input type="file" class="form-control" name="medicalReport" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <div class="col-md-6">
+    <label>Affidavit of Support Form</label>
+    <input type="file" class="form-control" name="affidavitSupport" accept=".pdf">
+    </div>
+
+    <div class="col-md-6">
+    <label>Study Plan (if applicable)</label>
+    <input type="file" class="form-control" name="studyPlan" accept=".pdf,.doc,.docx">
+    </div>
+
+    <div class="col-md-6">
+    <label>Personal Information Consent Forms</label>
+    <input type="file" class="form-control" name="consentForm" accept=".pdf">
+    </div>
+
+</div>
+
+<div class="section-title mt-4">Declaration</div>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<label>Applicant Signature</label>
+<input class="form-control">
+</div>
+
+<div class="col-md-6">
+<label>Date</label>
+<input type="date" class="form-control">
+</div>
+
+</div>
+
+<div class="mt-4 d-flex justify-content-between">
+<button type="button" class="btn btn-secondary prev-btn">Previous</button>
+<button type="submit" class="btn btn-success">Submit Application</button>
+</div>
+
+</div>
+
+</form>
+</div>
+</div>
+
+<script>
+
+const steps=document.querySelectorAll(".form-step")
+const nextBtns=document.querySelectorAll(".next-btn")
+const prevBtns=document.querySelectorAll(".prev-btn")
+const progress=document.getElementById("progressBar")
+
+let step=0
+
+function updateStep(){
+steps.forEach((s,i)=>{
+s.classList.toggle("active",i===step)
+})
+
+progress.style.width=((step+1)/steps.length*100)+"%"
+window.scrollTo(0,0)
+}
+
+nextBtns.forEach(btn=>{
+btn.onclick=()=>{
+if(step<steps.length-1){
+step++
+updateStep()
+}
+}
+})
+
+prevBtns.forEach(btn=>{
+btn.onclick=()=>{
+if(step>0){
+step--
+updateStep()
+}
+}
+})
+
+updateStep()
+
+</script>
+<script>
+const photoInput = document.getElementById("photo");
+const previewImg = document.getElementById("previewImg");
+const photoText = document.getElementById("photoText");
+
+photoInput.addEventListener("change", function(){
+
+const file = this.files[0];
+
+if(file){
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+
+previewImg.src = e.target.result;
+previewImg.style.display = "block";
+photoText.style.display = "none";
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+</script>
+
+<script>
+document.getElementById("appForm").addEventListener("submit", async function(e){
+
+e.preventDefault()
+
+const form = document.getElementById("appForm")
+const formData = new FormData(form)
+
+const response = await fetch("/apply",{
+method:"POST",
+body:formData
+})
+
+const result = await response.json()
+
+alert("Application submitted successfully!\nYour Application ID: "+result.id)
+
+localStorage.setItem("applicationId",result.id)
+
+window.location.href="track.html"
+
+})
+
+</script>
+
+</body>
+</html>

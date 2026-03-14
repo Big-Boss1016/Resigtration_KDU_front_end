@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Application Form — Kyungdong University</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Kyungdong University — Application Form</h1>
+        <p class="muted">Please fill in all sections using CAPITAL LETTERS.</p>
+      </div>
+      <nav>
+        <a class="pdf-link" href="/mnt/data/Application_Form.pdf" target="_blank" rel="noopener">Open original PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main-grid">
+    <form id="appForm" class="card form-card" autocomplete="on" novalidate>
+      <!-- Photo + top info -->
+      <section class="top-row">
+        <div class="photo-upload">
+          <label for="photo" class="photo-label">Passport Photo</label>
+          <div class="photo-placeholder" id="photoPreview">150×185</div>
+          <input id="photo" name="photo" type="file" accept="image/*" />
+        </div>
+
+        <div class="top-info">
+          <div class="field-row">
+            <label>Title</label>
+            <div class="inline-controls">
+              <label><input name="title" type="radio" value="Mr"> Mr</label>
+              <label><input name="title" type="radio" value="Ms"> Ms</label>
+              <label><input name="title" type="radio" value="Mrs"> Mrs</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Marital Status</label>
+            <div class="inline-controls">
+              <label><input name="marital" type="radio" value="single"> Single</label>
+              <label><input name="marital" type="radio" value="married"> Married</label>
+              <label><input name="marital" type="radio" value="divorced"> Divorced</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Family Name</label>
+            <input name="familyName" type="text" required />
+          </div>
+
+          <div class="field-row">
+            <label>Given Name(s)</label>
+            <input name="givenNames" type="text" required />
+          </div>
+
+          <div class="field-row two-cols">
+            <div>
+              <label>Date of Birth (YYYY/MM/DD)</label>
+              <input name="dob" type="date" />
+            </div>
+            <div>
+              <label>Passport Number</label>
+              <input name="passport" type="text" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Do you currently have a Korean visa?</label>
+            <div class="inline-controls">
+              <label><input name="koreanVisa" type="radio" value="yes"> Yes</label>
+              <label><input name="koreanVisa" type="radio" value="no"> No</label>
+              <input name="visaType" type="text" placeholder="If yes, specify visa type" />
+            </div>
+          </div>
+
+          <div class="field-row two-cols">
+            <div>
+              <label>Country of Birth</label>
+              <input name="birthCountry" type="text" />
+            </div>
+            <div>
+              <label>Citizenship</label>
+              <input name="citizenship" type="text" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Email</label>
+            <input name="email" type="email" />
+          </div>
+
+          <div class="field-row inline-label">
+            <label>SNS ID</label>
+            <div class="inline-controls">
+              <select name="sns">
+                <option value="">Select platform</option>
+                <option>WhatsApp</option>
+                <option>Telegram</option>
+                <option>Viber</option>
+                <option>Facebook</option>
+                <option>LinkedIn</option>
+                <option>Other</option>
+              </select>
+              <input name="snsId" type="text" placeholder="ID / handle" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Address Sections -->
+      <section class="section">
+        <h2>2. Permanent Address</h2>
+        <div class="field-row">
+          <label>Full Address</label>
+          <input name="permAddress" type="text" />
+        </div>
+        <div class="field-row two-cols">
+          <div>
+            <label>ZIP Code</label>
+            <input name="permZip" type="text" />
+          </div>
+          <div>
+            <label>Telephone</label>
+            <input name="permPhone" type="tel" />
+          </div>
+        </div>
+        <div class="field-row">
+          <label>Mobile Phone</label>
+          <input name="permMobile" type="tel" />
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>3. Current Address</h2>
+        <p class="muted">Leave blank if same as Permanent Address</p>
+        <div class="field-row">
+          <label>Full Address</label>
+          <input name="currAddress" type="text" />
+        </div>
+        <div class="field-row two-cols">
+          <div>
+            <label>ZIP Code</label>
+            <input name="currZip" type="text" />
+          </div>
+          <div>
+            <label>Telephone</label>
+            <input name="currPhone" type="tel" />
+          </div>
+        </div>
+        <div class="field-row">
+          <label>Mobile Phone</label>
+          <input name="currMobile" type="tel" />
+        </div>
+      </section>
+
+      <!-- Language -->
+      <section class="section">
+        <h2>4. Language Proficiency</h2>
+        <div class="field-row">
+          <label>English is my first language</label>
+          <div class="inline-controls">
+            <label><input name="engFirst" type="radio" value="yes"> Yes</label>
+            <label><input name="engFirst" type="radio" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>I completed previous studies taught in English</label>
+          <div class="inline-controls">
+            <label><input name="engInstruction" type="radio" value="yes"> Yes</label>
+            <label><input name="engInstruction" type="radio" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>English / Korean Test in past two years?</label>
+          <div class="inline-controls">
+            <label><input name="langTest" type="radio" value="yes"> Yes</label>
+            <label><input name="langTest" type="radio" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Test Name</label>
+            <input name="testName" type="text" placeholder="IELTS, TOEFL, TOPIK, etc." />
+          </div>
+          <div>
+            <label>Test Date</label>
+            <input name="testDate" type="date" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>Test Score / Level</label>
+          <input name="testScore" type="text" />
+        </div>
+      </section>
+
+      <!-- Medium of instruction -->
+      <section class="section">
+        <h2>5. Medium of Instruction I intend to use for my study in Korea</h2>
+        <div class="inline-controls">
+          <label><input name="medium" type="radio" value="korean"> Korean</label>
+          <label><input name="medium" type="radio" value="english"> English</label>
+        </div>
+      </section>
+
+      <!-- Courses -->
+      <section class="section">
+        <h2>6. The Course(s) I Apply For</h2>
+
+        <fieldset class="courses">
+          <legend>Language Course</legend>
+          <label><input name="langCourse_eap" type="checkbox"> English Language for Academic Purposes (EAP)</label>
+          <label><input name="langCourse_kap" type="checkbox"> Korean Language for Academic Purposes (KAP)</label>
+        </fieldset>
+
+        <fieldset class="courses">
+          <legend>Undergraduate Degree Course</legend>
+          <label><input name="ug_iba" type="checkbox"> International Business Administration (English)</label>
+          <label><input name="ug_sc" type="checkbox"> Smart Computing (English)</label>
+          <label><input name="ug_hm" type="checkbox"> International Hotel Management (English)</label>
+          <label><input name="ug_ai" type="checkbox"> Artificial Intelligence (English)</label>
+          <label><input name="ug_media" type="checkbox"> SNS Media and Film Production (English)</label>
+          <label><input name="ug_kbc" type="checkbox"> Korean Business Convergence (Korean)</label>
+        </fieldset>
+
+        <fieldset class="courses">
+          <legend>Graduate Degree Course</legend>
+          <label><input name="pg_aids" type="checkbox"> Artificial Intelligence and Data Science (English)</label>
+          <label><input name="pg_iba" type="checkbox"> International Business Administration (English)</label>
+          <label><input name="pg_htm" type="checkbox"> International Hospitality and Tourism Management (English)</label>
+        </fieldset>
+      </section>
+
+      <!-- Previous Studies -->
+      <section class="section">
+        <h2>7. Previous Studies</h2>
+        <p class="muted">Attach certified copies of academic documents as required.</p>
+
+        <div class="study-block">
+          <h3>High School</h3>
+          <div class="field-row">
+            <label>Name of High School</label>
+            <input name="hs_name" type="text" />
+          </div>
+          <div class="field-row two-cols">
+            <div>
+              <label>Country</label>
+              <input name="hs_country" type="text" />
+            </div>
+            <div>
+              <label>Result / Average Grade / CGPA</label>
+              <input name="hs_grade" type="text" />
+            </div>
+          </div>
+          <div class="field-row">
+            <label>Full Address</label>
+            <input name="hs_address" type="text" />
+          </div>
+          <div class="field-row two-cols">
+            <div>
+              <label>Entrance Date</label>
+              <input name="hs_start" type="date" />
+            </div>
+            <div>
+              <label>Date of Completion</label>
+              <input name="hs_end" type="date" />
+            </div>
+          </div>
+        </div>
+
+        <div class="study-block">
+          <h3>University / Tertiary (if applicable)</h3>
+          <div class="field-row">
+            <label>Name of Qualifications (Diploma or Degree)</label>
+            <input name="ug_qualification" type="text" />
+          </div>
+          <div class="field-row">
+            <label>Name of University</label>
+            <input name="ug_university" type="text" />
+          </div>
+          <div class="field-row two-cols">
+            <div>
+              <label>Country</label>
+              <input name="ug_country" type="text" />
+            </div>
+            <div>
+              <label>Result / Average Grade / CGPA</label>
+              <input name="ug_grade" type="text" />
+            </div>
+          </div>
+          <div class="field-row two-cols">
+            <div>
+              <label>Entrance Date</label>
+              <input name="ug_start" type="date" />
+            </div>
+            <div>
+              <label>Date of Completion</label>
+              <input name="ug_end" type="date" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Financial Sponsor -->
+      <section class="section">
+        <h2>8. Financial Sponsor</h2>
+        <div class="field-row">
+          <label>Name of Sponsor</label>
+          <input name="sponsor_name" type="text" />
+        </div>
+        <div class="field-row">
+          <label>Relationship</label>
+          <div class="inline-controls">
+            <label><input name="sponsor_rel" type="radio" value="self"> Myself</label>
+            <label><input name="sponsor_rel" type="radio" value="father"> Father</label>
+            <label><input name="sponsor_rel" type="radio" value="mother"> Mother</label>
+            <label><input name="sponsor_rel" type="radio" value="other"> Other</label>
+            <input name="sponsor_rel_other" type="text" placeholder="If other, specify" />
+          </div>
+        </div>
+        <div class="field-row">
+          <label>Occupation</label>
+          <input name="sponsor_occ" type="text" />
+        </div>
+        <div class="field-row">
+          <label>Telephone No.</label>
+          <input name="sponsor_phone" type="tel" />
+        </div>
+      </section>
+
+      <!-- Checklist & Declaration -->
+      <section class="section">
+        <h2>9. Application Checklist</h2>
+        <div class="check-grid">
+          <label><input type="checkbox" name="chk_certificates"> All Academic Certificates Required</label>
+          <label><input type="checkbox" name="chk_lang"> Certificate of Language Proficiency</label>
+          <label><input type="checkbox" name="chk_bank"> Bank Balance Statement</label>
+          <label><input type="checkbox" name="chk_passport"> Copy of Your Passport</label>
+          <label><input type="checkbox" name="chk_code"> Student Code of Conduct</label>
+          <label><input type="checkbox" name="chk_med"> Medical Check-up Report</label>
+          <label><input type="checkbox" name="chk_affidavit"> Affidavit of Support Form</label>
+          <label><input type="checkbox" name="chk_plan"> Study Plan (if applicable)</label>
+          <label><input type="checkbox" name="chk_consent"> Personal Information Consent Forms</label>
+        </div>
+
+        <h3>10. Declaration</h3>
+        <p class="muted">I declare that the above information is true and accurate and agree that any false statement can lead to the termination of my admission or enrollment at the university.</p>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Applicant's signature</label>
+            <input name="app_signature" type="text" placeholder="Full name (typed)" />
+          </div>
+          <div>
+            <label>Date (YYYY/MM/DD)</label>
+            <input name="app_date" type="date" />
+          </div>
+        </div>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Agent's signature (if applicable)</label>
+            <input name="agent_signature" type="text" />
+          </div>
+          <div>
+            <label>Date</label>
+            <input name="agent_date" type="date" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Consent / Agreement pages -->
+      <section class="section consent">
+        <h2>Agreement for Collection and Use of Personal Information</h2>
+
+        <div class="consent-block">
+          <h4>1. Consent to Collection and Use of Personal Information</h4>
+          <p class="muted">Personal information to be collected: Name, Nationality, Date of Birth, Gender, Address, Email, Contact Numbers, Family Relationship Certificates, Academic Certificates and Transcripts, Passport Number, Foreigner Registration Information.</p>
+          <p class="muted">Purpose: Admission and Management of International Students. Period of retention: 5 Years.</p>
+          <div class="inline-controls">
+            <label><input name="consent_1" type="radio" value="agree"> I Agree</label>
+            <label><input name="consent_1" type="radio" value="disagree"> I Disagree</label>
+          </div>
+        </div>
+
+        <div class="consent-block">
+          <h4>2. Consent to Collection and Use of Personal Identification Information</h4>
+          <p class="muted">Items: Passport Number, Foreigner Registration Number. Purpose: Admission and Management of International Students. Retention: 5 Years.</p>
+          <div class="inline-controls">
+            <label><input name="consent_2" type="radio" value="agree"> I Agree</label>
+            <label><input name="consent_2" type="radio" value="disagree"> I Disagree</label>
+          </div>
+        </div>
+
+        <div class="consent-block">
+          <h4>3. Consent to provide personal information to third parties</h4>
+          <p class="muted">Parties: The Ministry of Justice, The Immigration Office, Insurance Companies/Organizations. Purpose: Admission and Management of International Students.</p>
+          <div class="inline-controls">
+            <label><input name="consent_3" type="radio" value="agree"> I Agree</label>
+            <label><input name="consent_3" type="radio" value="disagree"> I Disagree</label>
+          </div>
+        </div>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Name</label>
+            <input name="consent_name" type="text" />
+          </div>
+          <div>
+            <label>Signature</label>
+            <input name="consent_signature" type="text" placeholder="Typed name" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>Date</label>
+          <input name="consent_date" type="date" />
+        </div>
+      </section>
+
+      <!-- Letter of Consent -->
+      <section class="section">
+        <h2>Letter of Consent (학력조회동의서)</h2>
+        <p class="muted">This is to confirm that I have attended and completed the stated school. By applying I understand and agree this university may request my academic records from previous schools.</p>
+
+        <div class="field-row">
+          <label>School Name</label>
+          <input name="loc_school" type="text" />
+        </div>
+        <div class="field-row">
+          <label>School Address</label>
+          <input name="loc_school_addr" type="text" />
+        </div>
+        <div class="field-row two-cols">
+          <div>
+            <label>Student Name</label>
+            <input name="loc_student" type="text" />
+          </div>
+          <div>
+            <label>Date of Birth</label>
+            <input name="loc_dob" type="date" />
+          </div>
+        </div>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Date of Admission (or Transfer)</label>
+            <input name="loc_admit" type="date" />
+          </div>
+          <div>
+            <label>Date of Graduation (or Withdrawal)</label>
+            <input name="loc_grad" type="date" />
+          </div>
+        </div>
+
+        <div class="field-row two-cols">
+          <div>
+            <label>Date (month/day/year)</label>
+            <input name="loc_date" type="date" />
+          </div>
+          <div>
+            <label>Signature</label>
+            <input name="loc_signature" type="text" placeholder="Typed name" />
+          </div>
+        </div>
+      </section>
+
+      <footer class="form-footer">
+        <div class="muted small">Phone: +82 33.639.0131 · Fax: +82.33.639.0303 · Email: info@kduniv.ac.kr</div>
+        <div class="cta-row">
+          <button type="reset" class="btn ghost">Reset</button>
+          <button type="submit" class="btn primary">Submit Application</button>
+        </div>
+      </footer>
+    </form>
+  </main>
+
+  <script>
+    // Photo preview simple script
+    const photoInput = document.getElementById('photo');
+    const photoPreview = document.getElementById('photoPreview');
+    photoInput?.addEventListener('change', (e) => {
+      const f = e.target.files?.[0];
+      if (!f) {
+        photoPreview.textContent = '150×185';
+        photoPreview.style.backgroundImage = '';
+        return;
+      }
+      const url = URL.createObjectURL(f);
+      photoPreview.style.backgroundImage = `url(${url})`;
+      photoPreview.textContent = '';
+    });
+
+    // Basic client-side submit handler
+    const form = document.getElementById('appForm');
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      // lightweight validation example
+      const family = form.elements['familyName'].value.trim();
+      const given = form.elements['givenNames'].value.trim();
+      if (!family || !given) {
+        alert('Please enter Family Name and Given Name(s).');
+        return;
+      }
+      // Here you'd collect data and send to server via fetch() or similar.
+      alert('Form ready to send. Integrate submission endpoint as needed.');
+    });
+  </script>
+</body>
+</html>

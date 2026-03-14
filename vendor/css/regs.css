@@ -1,0 +1,145 @@
+body{
+min-height:100vh;
+margin:0;
+
+/* background image */
+background:
+linear-gradient(
+120deg,
+rgba(10,25,60,0.75),
+rgba(40,40,40,0.75),
+rgba(140,30,30,0.45),
+rgba(20,80,150,0.55)
+),
+url("img/banner_bg.jpg");   /* put your image path here */
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+.card{
+background: linear-gradient(
+135deg,
+rgba(255,255,255,0.25),
+rgba(255,255,255,0.08)
+);
+
+backdrop-filter: blur(14px) saturate(160%);
+-webkit-backdrop-filter: blur(14px) saturate(160%);
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.25);
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.35),
+inset 0 0 15px rgba(255,255,255,0.15);
+
+padding:30px;
+
+}
+.card::before{
+
+content:"";
+position:absolute;
+inset:0;
+
+border-radius:16px;
+
+background: linear-gradient(
+120deg,
+rgba(60,120,255,0.25),
+rgba(255,70,70,0.15),
+rgba(255,255,255,0.15)
+);
+
+z-index:-1;
+filter: blur(25px);
+
+}
+
+.form-control{
+
+background:rgba(255,255,255,0.85);
+border:none;
+border-radius:8px;
+
+}
+
+.form-control:focus{
+
+box-shadow:0 0 0 2px rgba(60,120,255,0.4);
+
+}
+.section-title{
+color:#0b67c2;
+font-weight:700;
+margin-bottom:15px;
+text-transform:uppercase;
+font-size:14px;
+}
+
+.form-step{
+display:none;
+}
+
+.form-step.active{
+display:block;
+}
+
+.photo-box{
+width:150px;
+height:185px;
+border:2px dashed #cfe6ff;
+border-radius:8px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#fbfdff;
+color:#7a8aa6;
+
+overflow:hidden;
+position:relative;
+}
+
+.photo-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.progress{
+height:8px;
+}
+
+.btn-primary{
+
+background:linear-gradient(135deg,#2c6cff,#1f4fbf);
+border:none;
+}
+
+.btn-primary:hover{
+
+background:linear-gradient(135deg,#1f4fbf,#163a8f);
+
+}

@@ -1,0 +1,142 @@
+pdf-link
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0b67c2;
+  --accent-600: #0954a0;
+  --surface-shadow: 0 8px 30px rgba(9,30,66,0.08);
+  --radius: 12px;
+  --max-width: 1100px;
+  --gutter: 22px;
+  --text: #222;
+}
+
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #eef2f8 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-bottom:60px;
+}
+
+/* layout */
+.wrap{
+  width: min(96%, var(--max-width));
+  margin: 20px auto;
+}
+
+/* header */
+.site-header{
+  background: transparent;
+  margin-bottom: 8px;
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand h1{font-size:20px;margin:0}
+.brand .muted{color:var(--muted);font-size:13px; margin-top:6px}
+.pdf-link{
+  
+  color:var(--accent);
+  text-decoration:none;
+  border:1px solid rgba(11,103,194,0.08);
+  padding:8px 12px;
+  border-radius:8px;
+  background:white;
+  box-shadow:var(--surface-shadow);
+  font-weight:600;
+}
+
+/* main card */
+.main-grid{display:block}
+.card.form-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--surface-shadow);
+  margin-bottom:30px;
+}
+
+/* sections */
+.section{margin-top:20px;padding-top:6px;border-top:1px dashed #eef2f7}
+.section h2{font-size:16px;color:var(--accent);margin-bottom:8px}
+.section h3{margin:10px 0 6px;font-size:14px;color:#333}
+.muted{color:var(--muted);font-size:13px}
+
+/* top row layout */
+.top-row{display:flex;gap:22px;align-items:flex-start}
+.photo-upload{width:180px;flex:0 0 180px}
+.photo-label{display:block;font-weight:700;margin-bottom:8px}
+.photo-placeholder{
+  width:180px;height:220px;border-radius:8px;border:2px dashed #d7e6fb;background:#fbfdff;
+  display:flex;align-items:center;justify-content:center;color:#9aa9bf;font-weight:600;background-size:cover;background-position:center;
+}
+.photo-upload input[type=file]{margin-top:10px}
+
+/* fields */
+.field-row{margin:12px 0;display:flex;flex-direction:column}
+.field-row.inline-label{display:flex;flex-direction:column;gap:8px}
+.field-row label{font-weight:600;color:#333;margin-bottom:8px}
+.field-row input[type=text],
+.field-row input[type=email],
+.field-row input[type=tel],
+.field-row input[type=date],
+.field-row select,
+.field-row textarea{
+  border:1px solid #e6eef9;
+  background:#fbfdff;
+  padding:10px 12px;border-radius:10px;font-size:14px;
+  outline:none;transition:all .15s ease;
+}
+.field-row input:focus,
+.field-row select:focus,
+.field-row textarea:focus{
+  box-shadow:0 6px 18px rgba(11,103,194,0.06);
+  border-color:var(--accent);
+}
+
+/* two columns helper */
+.two-cols{display:flex;gap:12px}
+.two-cols > *{flex:1}
+
+/* inline controls */
+.inline-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.inline-controls label{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#444}
+.inline-controls input[type=radio],
+.inline-controls input[type=checkbox]{transform:scale(1.02)}
+
+/* courses & checklists */
+.courses{border:1px solid #eef6ff;padding:12px;border-radius:10px;margin:10px 0;background:linear-gradient(180deg, rgba(11,103,194,0.02), rgba(11,103,194,0.01))}
+.check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;padding:12px 0}
+
+/* study blocks */
+.study-block{padding:12px;border-radius:10px;background:#fafcfe;border:1px solid #eef6ff;margin-top:10px}
+
+/* consent */
+.consent-block{padding:12px;background:#ffffff;border-left:4px solid #dbeeff;margin-top:12px;border-radius:8px}
+.consent-block h4{margin:0 0 6px}
+
+/* footer */
+.form-footer{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:12px}
+.small{font-size:12px;color:var(--muted)}
+.cta-row{display:flex;gap:10px}
+.btn{padding:12px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:#fff;border:1px solid #e6eef9;color:#333}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(11,103,194,0.12)}
+.btn.primary:hover{background:var(--accent-600)}
+
+/* responsive */
+@media (max-width:900px){
+  .top-row{flex-direction:column}
+  .photo-upload{width:100%}
+  .two-cols{flex-direction:column}
+  .form-footer{flex-direction:column;align-items:flex-start}
+}
